@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EventManager.Web.ViewModels.EventViewModel>
+
+@{
+    ViewBag.Title = "EventManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    @foreach (var e in Model)
+    {
+    <div class="row">
+        <div class="col-md-8">
+            <h3>@e.Name</h3>
+            <h4>Location: @e.Location</h4>
+            <h4>Starting Date: @e.StartDate</h4>
+            <h4>Ending Date: @e.EndDate</h4>
+        </div>
+        <div class="col-md-4">
+            <h3>Actions:</h3>
+            <a href="@Url.Action("DeleteEvent", "Home", new { Id = e.Id })"><i class="fa fa-close" style="font-size:2em"></i></a>
+            <a href="@Url.Action("EditEvent", "Home", new { Id = e.Id })"><i class="fa fa-edit" style="font-size:2em"></i></a>
+        </div>
+    </div>
+    }
+</div>
