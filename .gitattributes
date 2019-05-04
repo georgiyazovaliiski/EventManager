@@ -61,3 +61,7 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+
+EventManager.Model/Client\ Scripts* linguist-vendored=true
+EventManager.Web/Client\ Scripts* linguist-vendored=true
